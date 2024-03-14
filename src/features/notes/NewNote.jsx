@@ -5,7 +5,7 @@ import { PulseLoader } from "react-spinners";
 const NewNote = () => {
     const { users } = useGetUsersQuery("usersList", {
         selectFromResult: ({ data }) => ({
-          user: data?.ids.map(id => data?.entities[id])
+          users: data?.ids.map(id => data?.entities[id])
         }),
       });
 
